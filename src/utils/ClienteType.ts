@@ -3,4 +3,5 @@ export type ClienteType = {
     nome: string
     email: string
     cidade: string
+    token?: string  
 }
