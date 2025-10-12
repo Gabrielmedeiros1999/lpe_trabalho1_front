@@ -1,37 +1,33 @@
 import { useEffect, useState } from "react"
 
-import ItemAdmin from "./components/ItemAdmin"
-import { Link } from "react-router-dom"
-import type { AdminType } from "../utils/AdminType"
+import ItemCliente from './components/ItemCliente'
+import type { ClienteType } from "../utils/ClienteType"
+
 
 const apiUrl = import.meta.env.VITE_API_URL
 
-export default function AdminCadAdmin() {
-  const [admins, setAdmins] = useState<AdminType[]>([])
+export default function AdminClientes() {
+  const [clientes, setClientes] = useState<ClienteType[]>([])
 
   useEffect(() => {
-    async function getAdmins() {
-      const response = await fetch(`${apiUrl}/admins`)
+    async function getClientes() {
+      const response = await fetch(`${apiUrl}/clientes`)
       const dados = await response.json()
-      setAdmins(dados)
+      setClientes(dados)
     }
-    getAdmins()
+    getClientes()
   }, [])
 
-  const listaAdmins = admins.map(admin => (
-    <ItemAdmin key={admin.id} adminLinha={admin} admins={admins} setAdmins={setAdmins} />
+  const listaClientes = clientes.map(cliente => (
+    <ItemCliente key={cliente.id} cliente={cliente} clientes={clientes} setClientes={setClientes} />
   ))
 
   return (
     <div className='m-4 mt-24'>
       <div className='flex justify-between'>
         <h1 className="mb-4 text-2xl font-bold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white">
-          Cadastro de Administradores do Sistema
+          Controle de Clientes
         </h1>
-        <Link to="/admin/cadAdmin/novo" 
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-md px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-          Novo Admin
-        </Link>
       </div>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -39,13 +35,13 @@ export default function AdminCadAdmin() {
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="px-6 py-3">
-                Nome do Admin
+                Nome do Cliente
               </th>
               <th scope="col" className="px-6 py-3">
-                E-mail
+                e-mail
               </th>
               <th scope="col" className="px-6 py-3">
-                Nível
+                Cidade
               </th>
               <th scope="col" className="px-6 py-3">
                 Ações
@@ -53,7 +49,7 @@ export default function AdminCadAdmin() {
             </tr>
           </thead>
           <tbody>
-            {listaAdmins}
+            {listaClientes}
           </tbody>
         </table>
       </div>

@@ -9,6 +9,8 @@ import MinhasPropostas from './MinhasPropostas.tsx'
 import Perfil from './Perfil.tsx'
 import CadastroTrocas from './CadastroTrocas.tsx'
 import CadCliente from './CadCliente.tsx'
+import TrocasProdutos from './TrocasProdutos.tsx'
+
 
 // ----------------- Rotas de Admin
 import AdminLayout from './admin/AdminLayout.tsx';
@@ -18,6 +20,8 @@ import AdminProdutos from './admin/AdminProdutos.tsx';
 import AdminNovoProduto from './admin/AdminNovoProduto.tsx';          
 import AdminPropostas from './admin/AdminPropostas.tsx';   
 import AdminCadAdmin from './admin/AdminCadAdmin.tsx';   
+import AdminNovoAdmin from './admin/AdminNovoAdmin.tsx';
+import AdminClientes from './admin/AdminClientes.tsx';
 
 import Layout from './Layout.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -36,6 +40,8 @@ const rotas = createBrowserRouter([
       { path: "produtos/novo", element: <AdminNovoProduto /> },  // ...
       { path: "propostas", element: <AdminPropostas /> },  // ...
       { path: "cadAdmin", element: <AdminCadAdmin /> },
+      { path: "cadAdmin/novo", element: <AdminNovoAdmin /> },
+      { path: "/admin/clientes", element: <AdminClientes /> },
     ],
   },
   {
@@ -49,6 +55,7 @@ const rotas = createBrowserRouter([
       { path: 'perfil', element: <Perfil /> },
       { path: 'cadCliente', element: <CadCliente /> },
       { path: 'cadastrarTrocas', element: <CadastroTrocas /> },
+      { path: 'trocasProdutos', element: <TrocasProdutos /> },
     ],
   },
 ])

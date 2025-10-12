@@ -60,7 +60,7 @@ export function MenuLateral() {
                 <span className="h-5 text-gray-600 text-2xl">
                   <FaRegUser />
                 </span>
-                <span className="ms-2 mt-1">Cadastro de Admins</span>
+                <span className="ms-2 mt-1 text-white">Cadastro de Admins</span>
               </Link>
             </li>
           }
