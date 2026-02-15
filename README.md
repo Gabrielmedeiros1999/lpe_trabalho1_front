@@ -63,7 +63,7 @@ O sistema simula um marketplace gamer, onde é possível anunciar produtos, gere
 - React Icons
 
 **Backend / API**
-- neon postgres 
+- Neon postgres 
 - Repositório da API:[ https://github.com/seu-usuario/revenda-avenida-api](https://github.com/Gabrielmedeiros1999/lpe_trabalho1)
 
 📁 Estrutura do Projeto
