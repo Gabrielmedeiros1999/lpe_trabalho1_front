@@ -1,69 +1,102 @@
-# React + TypeScript + Vite
+🕹️ Revenda de Jogos — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web desenvolvida para gerenciamento e comercialização de itens relacionados a jogos, permitindo que usuários comprem e vendam produtos dentro da própria plataforma.
 
-Currently, two official plugins are available:
+O sistema simula um marketplace gamer, onde é possível anunciar produtos, gerenciar contas e realizar compras de forma simples e intuitiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Funcionalidades
 
-## Expanding the ESLint configuration
+- 🔐 Autenticação de usuários
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  - Criação de conta
+ 
+  - Login na plataforma
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🛒 Compra de produtos
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+  - Usuários podem comprar itens cadastrados por outros usuários
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  - Itens cadastrados pelo administrador também ficam disponíveis para compra
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- 📦 Cadastro de itens para venda
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  - O próprio usuário pode anunciar produtos
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- 🧩 Tipos de itens disponíveis
+
+  - Jogos
+
+  - Consoles
+
+  - Controles
+
+  - Itens decorativos
+
+- 👤 Gerenciamento de conta
+
+  - Acesso aos próprios anúncios
+
+  - Controle dos produtos cadastrados
+
+🛠️ Tecnologias Utilizadas
+
+- TypeScript
+
+- React
+
+- Vite
+
+- TailwindCSS
+
+- React Router DOM
+
+- React Hook Form
+
+- Zustand (gerenciamento de estado)
+
+- TanStack React Table
+
+- Sonner (notificações)
+
+- Victory (gráficos)
+
+- React Icons
+
+**Backend / API**
+- neon postgres 
+- Repositório da API:[ https://github.com/seu-usuario/revenda-avenida-api](https://github.com/Gabrielmedeiros1999/lpe_trabalho1)
+
+📁 Estrutura do Projeto
+
+O projeto foi desenvolvido utilizando arquitetura baseada em componentes, seguindo boas práticas de organização, separação de responsabilidades e reutilização de código no React.
+
+💡 Objetivo do Projeto
+
+Este projeto foi desenvolvido com foco em estudo e aprimoramento de conceitos de desenvolvimento Frontend, incluindo:
+
+- Criação de interfaces modernas 
+
+- Gerenciamento de estado global
+
+- Manipulação de formulários
+
+- Rotas protegidas
+
+- Simulação de um marketplace completo
+
+- Organização escalável de projeto React + TypeScript
+
+# Como Executar o Projeto
+```bash
+git clone https://github.com/seu-usuario/revenda-avenida-front.git
+
+# Acessar pasta
+cd revenda-avenida-front
+
+# Instalar dependências
+npm install
+
+# Rodar projeto
+npm run dev
+
+
